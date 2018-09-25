@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -41,6 +42,8 @@ public class CountDownFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+        this.listenerCountDownFinish = null;
+        this.countDownTimer.cancel();
     }
     //endregion
 
@@ -75,12 +78,18 @@ public class CountDownFragment extends Fragment {
     public void setListenerCountDownFinish(ListenerCountDownFinish listener){
         this.listenerCountDownFinish = listener;
     }
+
+    public  void removeListenerCountDownFinish(){
+        this.listenerCountDownFinish = null;
+        this.countDownTimer.cancel();
+    }
     //endregion
 
     //region VARS
     private TextView mtvCountDown;
     private int mNumberCountDown;
     private CountDownTimer countDownTimer;
+
 
     private ListenerCountDownFinish listenerCountDownFinish;
     //endregion

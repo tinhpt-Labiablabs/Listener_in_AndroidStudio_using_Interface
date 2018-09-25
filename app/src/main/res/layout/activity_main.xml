@@ -9,10 +9,24 @@
         android:layout_height="wrap_content">
     </FrameLayout>
     <FrameLayout
+        android:layout_marginTop="16dp"
         android:id="@+id/frame_container_change_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </FrameLayout>
-
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/button_remove_listener"
+        android:layout_gravity="center"
+        android:text="Remove Listener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_marginTop="16dp"
+        android:text="Exit"
+        android:layout_gravity="center"
+        android:id="@+id/finishActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
